@@ -1,0 +1,57 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.site-footer {
+  background: v.$charcoal;
+  color: v.$off-white;
+  padding: 3.5rem 0 2rem;
+
+  &__inner {
+    @include m.container;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__blurb {
+    color: rgba(250, 250, 249, 0.6);
+    font-size: 0.9rem;
+    max-width: 22rem;
+    margin-top: 0.9rem;
+  }
+
+  &__heading {
+    @include m.eyebrow;
+    color: rgba(250, 250, 249, 0.5);
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    color: rgba(250, 250, 249, 0.82);
+    font-size: 0.92rem;
+    padding: 0.3rem 0;
+
+    &:hover {
+      color: v.$accent;
+    }
+  }
+
+  &__bottom {
+    @include m.container;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(250, 250, 249, 0.12);
+    font-size: 0.8rem;
+    color: rgba(250, 250, 249, 0.45);
+  }
+}

@@ -1,0 +1,53 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.login {
+  max-width: 22rem;
+  margin: 5rem auto;
+  padding: 2.25rem;
+  @include m.card;
+
+  &__title {
+    margin-bottom: 0.3rem;
+  }
+
+  &__subtitle {
+    @include m.eyebrow;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  &__field {
+    display: grid;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+  }
+
+  &__label {
+    font-family: v.$font-display;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  &__input {
+    border: 1px solid v.$line;
+    border-radius: v.$radius-sm;
+    padding: 0.75rem 0.9rem;
+    font-family: v.$font-body;
+
+    &:focus {
+      border-color: v.$accent;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__error {
+    color: #b3261e;
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+  }
+}

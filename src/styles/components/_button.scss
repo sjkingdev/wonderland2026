@@ -1,0 +1,50 @@
+@use "../variables" as v;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: v.$font-display;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: v.$radius-sm;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background v.$transition-fast, color v.$transition-fast,
+    border-color v.$transition-fast, transform v.$transition-fast;
+
+  &--primary {
+    background: v.$accent;
+    color: v.$white;
+
+    &:hover {
+      background: v.$accent-dark;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: v.$charcoal;
+    border-color: v.$line;
+
+    &:hover {
+      border-color: v.$charcoal;
+    }
+  }
+
+  &--on-dark {
+    background: v.$white;
+    color: v.$charcoal;
+
+    &:hover {
+      background: v.$accent;
+      color: v.$white;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,59 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: v.$fs-root;
+}
+
+body {
+  margin: 0;
+  background: v.$white;
+  color: v.$charcoal;
+  font-family: v.$font-body;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: v.$font-display;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+  letter-spacing: -0.01em;
+  color: v.$charcoal;
+}
+
+p {
+  margin: 0 0 1.2em;
+  color: v.$charcoal-soft;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  @include m.focus-ring;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: v.$accent;
+  color: v.$white;
+}

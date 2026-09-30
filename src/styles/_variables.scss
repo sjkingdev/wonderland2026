@@ -1,0 +1,29 @@
+// Digital Wonderland — design tokens
+// White canvas, charcoal type, one hard-working accent orange.
+
+// ---- color ----
+$white: #ffffff;
+$off-white: #fafaf9; // for alternating section backgrounds
+$charcoal: #262523; // primary text
+$charcoal-soft: #5c5a56; // secondary text
+$line: #e7e5e1; // hairlines, card borders
+$accent: #f54320; // the one accent — CTAs, links, active states, logo mark
+$accent-dark: #c73416; // hover state for accent-filled buttons
+
+// ---- type ----
+$font-display: "Space Grotesk", "Arial Narrow", sans-serif; // headings, nav, logo
+$font-body: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+$fs-root: 17px;
+
+// ---- layout ----
+$content-max: 42rem;
+$wide-max: 76rem;
+$gutter: 1.5rem;
+$section-space: 6rem;
+
+// ---- misc ----
+$radius-sm: 6px;
+$radius-md: 12px;
+$transition-fast: 140ms ease-out;
+$shadow-card: 0 1px 2px rgba(38, 37, 35, 0.06), 0 8px 24px rgba(38, 37, 35, 0.05);

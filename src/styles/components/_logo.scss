@@ -1,0 +1,38 @@
+@use "../variables" as v;
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  &__mark {
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: v.$radius-sm;
+    background: v.$charcoal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__mark-letter {
+    font-family: v.$font-display;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: v.$accent;
+    line-height: 1;
+  }
+
+  &__wordmark {
+    font-family: v.$font-display;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: v.$charcoal;
+    white-space: nowrap;
+  }
+
+  &__wordmark-accent {
+    color: v.$accent;
+  }
+}

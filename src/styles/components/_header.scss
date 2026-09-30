@@ -1,0 +1,108 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid v.$line;
+
+  &__inner {
+    @include m.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5rem;
+  }
+
+  &__nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+
+    @media (min-width: 800px) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-family: v.$font-display;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: v.$charcoal-soft;
+    position: relative;
+    padding: 0.25rem 0;
+
+    &:hover {
+      color: v.$charcoal;
+    }
+
+    &--active {
+      color: v.$charcoal;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1.55rem;
+        height: 2px;
+        background: v.$accent;
+      }
+    }
+  }
+
+  &__cta {
+    display: none;
+
+    @media (min-width: 800px) {
+      display: inline-flex;
+    }
+  }
+
+  &__menu-btn {
+    display: inline-flex;
+    background: none;
+    border: 1px solid v.$line;
+    border-radius: v.$radius-sm;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+
+    @media (min-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+.mobile-nav {
+  border-bottom: 1px solid v.$line;
+  background: v.$white;
+
+  @media (min-width: 800px) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem v.$gutter 1.25rem;
+  }
+
+  &__link {
+    padding: 0.65rem 0;
+    font-family: v.$font-display;
+    font-weight: 500;
+    color: v.$charcoal-soft;
+    border-bottom: 1px solid v.$line;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--active {
+      color: v.$accent;
+    }
+  }
+}
