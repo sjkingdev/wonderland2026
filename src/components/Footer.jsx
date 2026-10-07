@@ -41,8 +41,8 @@ export default function Footer() {
 
         <div>
           <span className="site-footer__heading">Get in touch</span>
-          <a className="site-footer__link" href="mailto:hello@digitalwonderland.studio">
-            hello@digitalwonderland.studio
+          <a className="site-footer__link" href="mailto:hello@digitalwonderland.co.uk">
+            hello@digitalwonderland.co.uk
           </a>
         </div>
       </div>
